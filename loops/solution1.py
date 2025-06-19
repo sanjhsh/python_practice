@@ -6,10 +6,9 @@ element=0
 
 for i in range (list_size):
     user_input=input("enter list's elements: ")
-    list.append(user_input)
+    list.append(int(user_input))
 
 print(list)
-
 
 for elements in list:
     if elements>=0:
