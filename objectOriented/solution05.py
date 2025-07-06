@@ -1,33 +1,35 @@
-class Car ():
-        def __init__(self,brand,model):
-                
-            self.brand =brand
-            self.model =model
+class Car():
 
-        def full_name(self):
-            return f"{self.brand} {self.model}"
+    def __init__(self,brand,model):
+        self.var1= brand
+        self.var2= model
 
-        def fuel_type(self):
-            return "deisel or petrol"
-
-
-class ElectricCar ():
-        def __init__(self,E_brand,E_model):
-                
-            self.user_brand =E_brand
-            self.user_model =E_model
-
-        def full_name(self):
-            return f"{self.E_brand} {self.E_model}"
-    
-        def fuel_type(self):
-            return "electricity"
+    def fuel_type(self):
+        return "petrol or diesel"
         
-user_input=input("enter type of vehicle: ")
+class ElectricCar():
+    def __init__(self,ebrand,emodel):
+        self.var3=ebrand
+        self.var4=emodel
 
-if user_input=="normal car":
-    print(Car(input("enter the brand name: "),input("enter the model: "),input("enter fuel type")))
-    print(user_input.brand)
-    print(user_input.model)  
-    print(user_input.full_name())
-    print(user_input.fuel_type())
+    def fuel_type(self):
+        return "electricity"
+
+car_type=input("enter the type of car: ")
+
+if car_type=="normal car":
+    user_input1=Car(input("enter the brand name : "),input("enter the model:"))
+    print(user_input1.var1)
+    print(user_input1.var2)
+    print(user_input1.fuel_type())
+
+elif car_type=="electric car":
+    user_input2=ElectricCar(input("enter the brand name : "),input("enter the model:"))
+    print(user_input2.var3)
+    print(user_input2.var4)
+    print(user_input2.fuel_type())
+
+my_car=Car("tata","safari")
+my_car=Car("tata","nexon")
+print(my_car.__private_attribute)
+print(my_car.model) 

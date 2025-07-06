@@ -1,25 +1,23 @@
 class Car():
-    car_count=0
-
     def __init__(self,model,brand):
         
         self.__private_attribute=brand
-        self.model=model
-        Car.car_count+=1
+        
+        self.__model=model
+        
 
     def get_private(self):
         return self.__private_attribute
     
-    @staticmethod
-    def general_dis():
-        return "cars are the mewns of transport"
+    @property
+    def get_model(self):
+        return self.__model
     
 my_car=Car("tata","safari")
-my_car=Car("tata","nexon")
+my_car.get_model()=="car"
 
+print(my_car.get_model())
+    
 
-print(Car.car_count)
-
-print(my_car.general_dis())
-print(Car.general_dis())
-
+    
+    
